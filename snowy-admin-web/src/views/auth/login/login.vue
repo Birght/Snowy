@@ -27,7 +27,6 @@
 							<img :alt="sysBaseConfig.SNOWY_SYS_NAME" :src="sysBaseConfig.SNOWY_SYS_LOGO" />
 							<label>{{ sysBaseConfig.SNOWY_SYS_NAME }}</label>
 						</div>
-						<!--<h2>{{ $t('login.signInTitle') }}</h2>-->
 					</div>
 					<a-tabs v-model:activeKey="activeKey">
 						<a-tab-pane key="userAccount" :tab="$t('login.accountPassword')">
@@ -151,7 +150,7 @@
 			}
 		},
 		computed: {
-			...mapState(globalStore, ['sysBaseConfig']),
+			...mapState(globalStore, ['sysBaseConfig'])
 		},
 		watch: {
 			'config.theme': function (val) {
